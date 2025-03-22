@@ -1,0 +1,24 @@
+{
+  "ideologies": [
+    {
+      "name": "Liberal",
+      "description": "Usted cree que cada individuo debe gestionar su propia vida, bajo su exclusiva responsabilidad y con la mínima intervención del Estado. Su función debe ser básicamente la de proteger los derechos individuales, en particular, la seguridad y la justicia. Se identifica con los conceptos de eficiencia y competencia."
+    },
+    {
+      "name": "Totalitario",
+      "description": "Usted defiende un alto nivel de intervención del Estado en cuestiones económicas y personales. Es el Estado responsable de regular las normas de convivencia de la Nación. La necesidad de la mayoría pesa más que la necesidad de unos pocos."
+    },
+    {
+      "name": "Progresista",
+      "description": "Según su criterio el Estado debe intervenir para brindar igualdad de oportunidades para las distintas personas, independientemente de su origen social, por lo tanto, considera justo que se redistribuya la riqueza de los más ricos hacia los más pobres. Usted cree en los conceptos de solidaridad, fraternidad, e igualdad dentro del orden social."
+    },
+    {
+      "name": "Conservador",
+      "description": "En lo económico Usted defiende el libre mercado y la competencia, sin embargo y al mismo tiempo desea mantener los valores morales, culturales y religiosos de la sociedad en la que vive, como forma de generar el orden y la armonía que toda nación necesita."
+    },
+    {
+      "name": "Centro",
+      "description": "En lo económico Usted cree en que es necesario que el Estado intervenga en la economía para mejorar oportunidades, pero siempre con el mérito individual, como mecanismo de ascenso social. En lo personal, cada individuo es libre de elegir su forma de vivir o morir, siempre y cuando no perjudique a terceros."
+    }
+  ]
+}

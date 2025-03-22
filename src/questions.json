@@ -1,0 +1,224 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "Personal",
+      "subCategory": "Libertad de expresión",
+      "question": "Algunos individuos y medios de comunicación difunden con facilidad opiniones equivocadas con objetivos cuestionables.",
+      "options": [
+        "Debe prohibirse la difusión de opiniones equivocadas cuyo objetivo sea manipular y/o influir en los demás.",
+        "Debe prohibirse la realización de apologías de ideologías extremas.",
+        "No debe haber censura de opiniones por parte del Estado en ningún caso."
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Personal",
+      "subCategory": "Religión",
+      "question": "La Iglesia realiza ciertas labores de carácter social. Por ello...",
+      "options": [
+        "El Estado debe sostener el culto católico, y promover sus valores a la hora de legislar y gobernar.",
+        "Estado y Religión van por distintos carriles, pero el Estado puede contribuir a la financiación de la Iglesia para sostener su labor social en colegios, centros de asistencia, etc.",
+        "La Iglesia debe autofinanciarse y no debe permitirse que se enseñe religión en los colegios parroquiales."
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Personal",
+      "subCategory": "Servicio militar",
+      "question": "La seguridad y formación de los ciudadanos es un tema de debate en la sociedad.",
+      "options": [
+        "El Servicio militar debe ser obligatorio, tanto para hombres como mujeres, como forma de contribuir al bien común y/o a la formación de los jóvenes.",
+        "El Servicio militar debe ser voluntario. El ejército debe estar formado por profesionales.",
+        "Ningún ciudadano debe realizar el servicio militar y el gasto en ejército debe ser el mínimo posible."
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Personal",
+      "subCategory": "Sexo",
+      "question": "Diferentes prácticas y preferencias sexuales generan posturas variadas en la legislación.",
+      "options": [
+        "La homosexualidad, la poligamia o la prostitución deben prohibirse o estar fuertemente controladas.",
+        "La prostitución debe prohibirse o estar fuertemente controlada.",
+        "La ley de matrimonio igualitario es un gran avance para la sociedad donde se aplica."
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Personal",
+      "subCategory": "Drogas",
+      "question": "El consumo de sustancias psicoactivas genera un debate sobre derechos individuales y salud pública.",
+      "options": [
+        "El consumo de drogas debe estar penado por la ley, y el Estado debe perseguir a quienes trafican con sustancias prohibidas.",
+        "El uso de algunas de las drogas como la marihuana, debe ser legal, solo para consumo personal.",
+        "Cada individuo es dueño de su cuerpo, por lo tanto, puede decidir que consume y que no."
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Personal",
+      "subCategory": "Seguridad",
+      "question": "¿Cómo debe tratarse a los menores que cometen delitos?",
+      "options": [
+        "Debe bajarse la edad de imputabilidad de los menores a 14 años y aplicarse la ley de reiterancia.",
+        "Los menores de 16 deben ser tratados como tal, y en caso de cometer un delito ser enviados nuevamente con su familia.",
+        "Ningún pibe nace chorro."
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Personal",
+      "subCategory": "Defensa de las minorías",
+      "question": "¿Cómo debe intervenir el Estado en la protección de las minorías?",
+      "options": [
+        "La implementación del sistema de cupos obligatorios para minorías debe imponerse por ley.",
+        "Las ayudas para la integración o los beneficios fiscales a los grupos menos representados son el mejor instrumento para paliar la discriminación.",
+        "El Estado no debe intervenir para perjudicar o beneficiar a ningún grupo o sector de la sociedad."
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Personal",
+      "subCategory": "Inmigración",
+      "question": "¿Cómo debe regularse el ingreso de inmigrantes al país?",
+      "options": [
+        "Debe limitarse la entrada de nuevos inmigrantes y/o exigirles que conozcan el idioma y conocimientos básicos de historia de nuestro país.",
+        "El Estado debe regular el ingreso de nuevos residentes a nuestro país para que los inmigrantes vengan de un modo legal.",
+        "No debe haber diferencias de derechos en función del lugar de nacimiento de la persona."
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Personal",
+      "subCategory": "Nación",
+      "question": "¿Debe el Estado intervenir en la promoción de la cultura nacional?",
+      "options": [
+        "El Estado debe promover la cultura nacional y limitar la influencia de elementos extranjeros.",
+        "El Estado debe promover el uso de los símbolos patrios en las instituciones educativas oficiales o privadas.",
+        "Cada ciudadano debe tener la libertad de consumir elementos de la cultura local o internacional de manera indistinta según sus preferencias."
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Económica",
+      "subCategory": "Medio Ambiente",
+      "question": "¿Cómo debe el Estado regular la contaminación ambiental?",
+      "options": [
+        "El método del fracking en la extracción de Petróleo debe estar prohibido por su contaminación al agua que utiliza.",
+        "Hay que promover las energías limpias mediante incentivos impositivos a aquellos que contaminen menos y cargas a los que contaminan más.",
+        "Hay que salir del Acuerdo de París que busca limitar la contaminación ambiental."
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Económica",
+      "subCategory": "Globalización",
+      "question": "¿Debe el Estado intervenir en el comercio internacional?",
+      "options": [
+        "El Estado debe limitar la entrada de productos de otros países para favorecer a los productores nacionales.",
+        "El Estado debe limitar la entrada de productos de países que no cuiden el medio ambiente.",
+        "El comercio internacional es un trato entre privados, en el cual el Estado no debe intervenir."
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Económica",
+      "subCategory": "Impuestos",
+      "question": "¿Cómo debe el Estado manejar la carga impositiva?",
+      "options": [
+        "Impuestos como el IVA deben reducirse, y compensarse con el aumento del Impuesto a las Ganancias para aumentar las prestaciones y servicios del Estado.",
+        "Los impuestos no deberían subir. Deben ser los justos y necesarios para sufragar los gastos del Estado.",
+        "Los impuestos deberían reducirse, aunque para ello haya que recortar algunas prestaciones y servicios del Estado."
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Económica",
+      "subCategory": "Jubilaciones",
+      "question": "¿Cómo debe gestionarse el sistema de pensiones?",
+      "options": [
+        "Las pensiones de jubilación deben ser gestionadas por el Estado con un sistema público de seguridad social.",
+        "Las jubilaciones deben estar garantizadas por el Estado, con algún tipo de modelo mixto que pueda conjugar un sistema público y planes privados.",
+        "Cada ciudadano es responsable de su propio plan de jubilaciones, por lo cual el Estado no debe exigir ningún tipo de contribución a la seguridad social."
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Económica",
+      "subCategory": "Solidaridad",
+      "question": "¿Quién debe ser responsable de la ayuda a los necesitados?",
+      "options": [
+        "El Estado debe intervenir para disminuir la desigualdad y la pobreza en la sociedad.",
+        "El Estado debe gestionar la ayuda y asistencia adecuada a los necesitados, independientemente de que las instituciones privadas de caridad puedan complementarla voluntariamente.",
+        "Las instituciones privadas de caridad deben ser las principales canalizadoras de la solidaridad de la sociedad."
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Económica",
+      "subCategory": "Permisos",
+      "question": "¿Debe el Estado regular el ejercicio profesional?",
+      "options": [
+        "El Estado debe regular el ejercicio profesional a través del control sobre los colegios profesionales.",
+        "Los profesionales cualificados deben inscribirse en colegios profesionales, ya que su supervisión garantiza la calidad de sus servicios.",
+        "El ejercicio de cualquier profesión debe ser libre para cualquier persona cualificada."
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Económica",
+      "subCategory": "Sindicatos",
+      "question": "¿Cómo debe ser la relación entre los sindicatos y el Estado?",
+      "options": [
+        "Los sindicatos son esenciales para proteger los derechos de los trabajadores. La afiliación a uno debe ser obligatoria.",
+        "Los sindicatos, como representantes de los trabajadores, deben contar con ciertas funciones especiales en la legislación laboral, pero no deben ser financiados por el Estado.",
+        "Los sindicatos deben regirse por las normas aplicables a cualquier otra asociación, y no atribuírseles funciones especiales."
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Económica",
+      "subCategory": "Salud",
+      "question": "¿Cómo debe garantizarse el acceso a la salud?",
+      "options": [
+        "Se debe garantizar un sistema de salud estatal que brinde servicios de calidad a toda la población.",
+        "El Estado debe garantizar el acceso universal a la sanidad mediante centros de salud que pueden ser privados o públicos.",
+        "Los ciudadanos deben ser libres de contratar el seguro médico que prefieran, y el Estado debe prestar solo servicios de emergencias."
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Económica",
+      "subCategory": "Bancos",
+      "question": "¿Cuál debe ser el rol del Banco Central en la economía?",
+      "options": [
+        "La presencia de una fuerte banca estatal es fundamental para fomentar el crecimiento económico del país.",
+        "El Banco Central tiene una función esencial regulando la economía, por lo que debe ser independiente y supervisar a los bancos comerciales.",
+        "El Banco Central debe tener un directorio que lo gestione, compuesto por representantes de los principales bancos privados."
+      ]
+    },
+    {
+      "id": 19,
+      "category": "Económica",
+      "subCategory": "Libertad e igualdad",
+      "question": "¿Qué debe priorizarse en la economía y la sociedad?",
+      "options": [
+        "Si tuviera que elegir, es más importante la igualdad que la libertad.",
+        "Los monopolios deben ser reguladas a través de una legislación específica que los limite.",
+        "Las grandes empresas son fundamentales para el desarrollo económico y deben funcionar sin restricciones por parte del Estado."
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Económica",
+      "subCategory": "Mercado Laboral",
+      "question": "¿Cómo deben regularse los contratos laborales?",
+      "options": [
+        "La legislación sobre contratos laborales debe garantizar seguridad al empleado en relación de dependencia.",
+        "Las leyes laborales deben garantizarle al empleado protección contra el despido arbitrario.",
+        "Los contratos laborales deben gozar de libertad de cláusulas entre las partes."
+      ]
+    }
+  ]
+}
