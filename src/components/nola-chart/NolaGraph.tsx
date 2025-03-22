@@ -20,6 +20,8 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
     {
       x: resultsCoordenates.economicFreedom,
       y: resultsCoordenates.individualFreedom,
+      imgSrc: undefined,
+      name: "Usted",
     },
   ];
 
@@ -96,11 +98,12 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             fillOpacity={0.1}
             label="Centro"
           />
-          <Scatter name="Usted" data={data} fill="brown" />
+          <Scatter key="Usted" name="Usted" data={data} fill="brown" />
           {politiciansIdeologies.map((politician) => (
             <Scatter
               key={politician.name}
               name={politician.name}
+              legendType="none"
               data={[
                 {
                   x: politician.position.economicFreedom,
