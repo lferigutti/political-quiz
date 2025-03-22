@@ -21,8 +21,12 @@ export interface Question {
   options: string[];
 } 
 
+export interface Politicians {
+  name: string;
+  position: Points;
+  src: string
+}
 
-//export type Category = "Personal" | "Económica";
 export enum Category {
   Personal = "Personal",
   Economic = "Económica",

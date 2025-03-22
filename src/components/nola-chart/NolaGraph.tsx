@@ -10,8 +10,10 @@ import {
   Legend,
   Label,
 } from "recharts";
-import { Points } from "../models";
-
+import { Points } from "../../models";
+import { politiciansIdeologies } from "../../data";
+import mileiImage from "/milei.jpeg";
+import CustomTooltip from "./CustomTooltip";
 
 const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
   const data = [
@@ -94,18 +96,34 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             fillOpacity={0.1}
             label="Centro"
           />
-          <Scatter
-            name="Tu Ubicacion en el Diagrama"
-            data={data}
-            fill="brown"
-          />
-          <Tooltip />
+          <Scatter name="Usted" data={data} fill="brown" />
+          {politiciansIdeologies.map((politician) => (
+            <Scatter
+              key={politician.name}
+              name={politician.name}
+              data={[
+                {
+                  x: politician.position.economicFreedom,
+                  y: politician.position.individualFreedom,
+                  imgSrc: mileiImage,
+                  name: politician.name,
+                },
+              ]}
+              shape={
+                <image
+                  width={30}
+                  height={30}
+                  xlinkHref={mileiImage}
+                />
+              }
+            />
+          ))}
+          <Tooltip content={<CustomTooltip />} />
           <Legend verticalAlign="top" height={36} />
         </ScatterChart>
       </ResponsiveContainer>
     </div>
   );
 };
-
 
 export default NolanGraph;

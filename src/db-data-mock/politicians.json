@@ -1,0 +1,19 @@
+{
+  "politicians": [
+    {
+      "name": "Milei",
+      "position": { "economicFreedom": 90, "individualFreedom": 90 },
+      "src": "@assets/milei.jpeg"
+    },
+    {
+      "name": "Bulrich",
+      "position": { "economicFreedom": 60, "individualFreedom": 5 },
+      "src": ""
+    },
+    {
+      "name": "Cristina",
+      "position": { "economicFreedom": 10, "individualFreedom": 20 },
+      "src": ""
+    }
+  ]
+}

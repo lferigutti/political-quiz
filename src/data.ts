@@ -1,6 +1,8 @@
-import QUESTIONS from "./questions.json";
-import IDEOLOGIES from "./ideologies.json"
-import type { Question, Category } from "./models";
+import QUESTIONS from "./db-data-mock/questions.json";
+import IDEOLOGIES from "./db-data-mock/ideologies.json";
+import POLITICIANS from "./db-data-mock/politicians.json";
+
+import type { Question, Category, Politicians } from "./models";
 
 
 
@@ -13,6 +15,8 @@ export const allQuestions: Question[] = QUESTIONS.questions.map((item) => ({
 }));;
 
 export const allIdeologies = IDEOLOGIES.ideologies;
+
+export const politiciansIdeologies: Politicians[] = POLITICIANS.politicians
 
 export const ideologies = [
   {

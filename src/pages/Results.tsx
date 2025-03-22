@@ -1,6 +1,6 @@
 import Card from "../shared/Card.js";
 import { resultsText } from "../constants/copyText.js";
-import NolanGraph from "../components/NolaGraph.jsx";
+import NolanGraph from "../components/nola-chart/NolaGraph.js";
 import { useLocation, useNavigate } from "react-router";
 import { useEffect } from "react";
 import { getIdeology } from "../utils/getIdeology.ts";
