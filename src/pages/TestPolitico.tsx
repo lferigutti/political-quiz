@@ -13,6 +13,7 @@ const TestPolitico = () => {
   const [selectedQuestionID, setSelectedQuestionID] = useState(1);
   const navigate = useNavigate();
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
+  const [isLastQuestionAnswered, setIsLastQuestionAnswered] = useState(false)
 
   const questionSelected = allQuestions.find(
     (question) => question.id === selectedQuestionID
@@ -39,6 +40,13 @@ const TestPolitico = () => {
       newUserAnswers = [...userAnswersCopy, answerWithPoints];
     }
     setUserAnswers(newUserAnswers);
+    if (answerWithPoints.questionId === 20) {
+      setIsLastQuestionAnswered(true);
+    } else {
+      setTimeout(() => {
+        handleNextQuestion();
+      }, 500);
+    }
   };
 
   const submitAnswers = () => {
@@ -98,8 +106,8 @@ const TestPolitico = () => {
             Próxima
           </Button>
         ) : (
-          <Button type="primary" onClick={submitAnswers}>
-            Ver los Resultados
+            <Button type={isLastQuestionAnswered? "primary" : "outline"} onClick={submitAnswers}>
+            Finalizar Test
           </Button>
         )}
       </div>
