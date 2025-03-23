@@ -52,15 +52,15 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload }) => {
         </p>
         <p style={{ fontSize: "0.9em", color: "#263238", marginBottom: "3px" }}>
           <span style={{ fontWeight: "bold", color: "#0288d1" }}>
-            Economic:
+            Libertad Economica:
           </span>{" "}
-          {x}
+          {`${x} %`}
         </p>
         <p style={{ fontSize: "0.9em", color: "#263238", marginBottom: "3px" }}>
           <span style={{ fontWeight: "bold", color: "#0288d1" }}>
-            Personal:
+            Libertad Personal:
           </span>{" "}
-          {y}
+          {`${y} %`}
         </p>
       </div>
     );

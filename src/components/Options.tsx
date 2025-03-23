@@ -16,7 +16,7 @@ const Options = ({
         return (
           <li key={option} className="w-full">
             <button
-              className={`w-full p-2 sm:p-3 text-lg break-words text-center sm:text-left 
+              className={`w-full p-2 sm:p-3 md:text-lg break-words text-center sm:text-left 
                           rounded-lg border transition-all duration-200 
                           hover:border-blue-600 hover:bg-blue-50 focus:border-sky-300 focus:bg-blue-100 
                           outline-none 

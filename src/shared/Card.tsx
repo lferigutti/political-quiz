@@ -1,21 +1,18 @@
-import PropTypes from "prop-types";
 
-const Card = ({ title, children }) => {
+import { ReactNode } from "react";
+
+const Card = ({ title, children }:{title: string, children?: ReactNode}) => {
   return (
-    <div className="w-full sm:max-w-2xl bg-white p-4 sm:p-8 rounded-lg shadow-lg mt-4">
-      <h1 className="text-3xl font-bold">
+    <div className="w-full bg-white p-4 rounded-lg shadow-lg mt-4 md:max-w-4xl md:h-full sm:max-w-2xl">
+      <h1 className="md:text-3xl font-bold md:m-4">
         {title}
       </h1>
-      <div className="mt-4 text-lg space-y-2 flex flex-col">
+      <div className="md:m-4 md:text-lg space-y-4 flex flex-col">
         {children}
       </div>
     </div>
   );
 };
 
-Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
 
 export default Card;

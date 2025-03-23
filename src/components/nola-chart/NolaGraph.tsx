@@ -13,8 +13,25 @@ import {
 import { Points } from "../../models";
 import { politicians } from "../../data";
 import CustomTooltip from "./CustomTooltip";
+import { useState, useEffect } from "react";
 
 const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
+  const [sizes, setSizes] = useState({
+    chartHeigh: window.innerWidth < 640 ? 450 : 550,
+    imageSize: window.innerWidth < 640 ? 35 : 50,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSizes({
+        chartHeigh: window.innerWidth < 640 ? 450 : 600,
+        imageSize: window.innerWidth < 640 ? 35 : 50,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const data = [
     {
       x: resultsCoordenates.economicFreedom,
@@ -26,7 +43,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
 
   return (
     <div style={{ width: "100%", overflowX: "auto" }}>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={sizes.chartHeigh}>
         <ScatterChart margin={{ top: 20, bottom: 50, left: 2, right: 2 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
@@ -34,6 +51,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             name="Libertad Economica"
             dataKey="x"
             domain={[0, 100]}
+            hide
             label={{
               value: "Libertad Economica",
               position: "insideBottom",
@@ -45,6 +63,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             name="Libertad Personal"
             dataKey="y"
             domain={[0, 100]}
+            hide
           >
             <Label
               value="Libertad Personal"
@@ -97,7 +116,6 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             fillOpacity={0.1}
             label="Centro"
           />
-          <Scatter key="Usted" name="Usted" data={data} fill="brown" />
           {politicians.map((politician) => (
             <Scatter
               key={politician.name}
@@ -113,14 +131,16 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
               ]}
               shape={
                 <image
-                  className="w-10 h-10 sm:w-10 sm:h-10 md:w-15 md:h-15"
+                  width={sizes.imageSize}
+                  height={sizes.imageSize}
                   xlinkHref={politician.img}
                 />
               }
             />
           ))}
-          <Tooltip content={<CustomTooltip />} />
-          <Legend verticalAlign="top" height={36} />
+          <Scatter key="Usted" name="Usted" data={data} fill="brown" />
+          <Tooltip content={<CustomTooltip />} cursor={false} />
+          <Legend verticalAlign="bottom" align="right" />
         </ScatterChart>
       </ResponsiveContainer>
     </div>

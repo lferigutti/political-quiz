@@ -27,12 +27,12 @@ const Results = () => {
     <Card title={resultsText.resultsTitle}>
       {resultIdeology ? (
         <>
-          <h2 className="text-lg">
+          <h2 className="md:text-lg">
             {" "}
             Su ideología es:
             <strong> {resultIdeology?.name}</strong>
           </h2>
-          <p>{resultIdeology.description}</p>
+          <p className="md:text-lg">{resultIdeology.description}</p>
         </>
       ) : (
         <p>Lo siento pero ha ocurrido un error.</p>
