@@ -1,13 +1,13 @@
 import QuestionBoard from "../components/QuestionBoard.js";
-import { Button } from "antd";
 import { useState } from "react";
 import { allQuestions } from "../data.ts";
-import HeaderBoard from "../components/HeaderBoard.jsx";
 import DropDownQuestions from "../components/DropDownQuestions.jsx";
 import { calculateAnswerPoints } from "../utils/calculateAnswerPoints.ts";
 import { calculateQuizResults } from "../utils/calculateQuizResult.ts";
 import { useNavigate } from "react-router";
 import type { Answer, UserAnswer } from "../models.ts";
+import Button from "../shared/Button.tsx";
+import { Progress } from "antd";
 
 const TestPolitico = () => {
   const [selectedQuestionID, setSelectedQuestionID] = useState(1);
@@ -18,7 +18,10 @@ const TestPolitico = () => {
     (question) => question.id === selectedQuestionID
   );
 
+  
   const numberOfQuestions = allQuestions?.length || 999;
+  const percentageAnswered = userAnswers.length * 100 / numberOfQuestions;
+  const questionRepliedIds = userAnswers.map((a)=> a.questionId)
 
   const handleAddAnswer = (answer: Answer) => {
     const answerWithPoints = calculateAnswerPoints(answer);
@@ -54,14 +57,17 @@ const TestPolitico = () => {
   return (
     <div className="flex flex-col bg-gray-100 space-y-5 items-center mt-4 px-4 sm:px-8">
       {/* Dropdown and Header */}
-      <div className="w-full max-w-3xl">
+      <div className="w-full max-w-3xl flex justify-between">
         <DropDownQuestions
           onSelectedQuestion={setSelectedQuestionID}
           questionSelectedID={selectedQuestionID}
+          questionAnsweredIds={questionRepliedIds}
         />
-        <HeaderBoard
-          questionId={selectedQuestionID}
-          totalQuestions={numberOfQuestions}
+        <Progress
+          type="circle"
+          percent={percentageAnswered}
+          size="small"
+          strokeColor="#a9f27d"
         />
       </div>
 
@@ -77,7 +83,7 @@ const TestPolitico = () => {
       {/* Navigation Buttons */}
       <div className="w-full max-w-3xl flex justify-between px-4 sm:px-8">
         <Button
-          className="text-lg"
+          type="background-secondary"
           onClick={handlePrevQuestion}
           disabled={selectedQuestionID === 1}
         >
@@ -85,15 +91,14 @@ const TestPolitico = () => {
         </Button>
         {selectedQuestionID !== numberOfQuestions ? (
           <Button
-            className="text-lg"
-            type="primary"
+            type="secondary"
             onClick={handleNextQuestion}
             disabled={selectedQuestionID === numberOfQuestions}
           >
             Próxima
           </Button>
         ) : (
-          <Button className="text-lg" onClick={submitAnswers}>
+          <Button type="primary" onClick={submitAnswers}>
             Ver los Resultados
           </Button>
         )}

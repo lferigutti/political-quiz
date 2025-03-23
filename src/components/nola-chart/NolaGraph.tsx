@@ -76,7 +76,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             x2={50}
             y1={50}
             y2={100}
-            fill="green"
+            fill="red"
             fillOpacity={0.2}
             label="Progresista"
           />
@@ -85,7 +85,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             x2={100}
             y1={50}
             y2={100}
-            fill="purple"
+            fill="yellow"
             fillOpacity={0.2}
             label="Liberal"
           />
@@ -103,7 +103,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             x2={100}
             y1={0}
             y2={50}
-            fill="yellow"
+            fill="DeepSkyBlue"
             fillOpacity={0.2}
             label="Conservador"
           />
@@ -138,7 +138,14 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
               }
             />
           ))}
-          <Scatter key="Usted" name="Usted" data={data} fill="brown" />
+          <Scatter
+            key="Usted"
+            name="Usted"
+            data={data}
+            fill="Brown"
+            shape="star"
+            legendType="star"
+          />
           <Tooltip content={<CustomTooltip />} cursor={false} />
           <Legend verticalAlign="bottom" align="right" />
         </ScatterChart>

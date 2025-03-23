@@ -1,0 +1,5 @@
+background: #ffffff
+primary: #a9f27d
+secondary: #51CFA2
+accent: #1E063A
+background-secondary: #F3F6FE

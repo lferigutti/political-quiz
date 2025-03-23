@@ -1,6 +1,5 @@
 import React from "react";
 
-
 interface TooltipPayload {
   name: string;
   x: number;
@@ -20,10 +19,10 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload }) => {
     return (
       <div
         style={{
-          backgroundColor: "#e0f7fa",
+          backgroundColor: "#ffffff", // Softer version of secondary
           padding: "10px",
           borderRadius: "8px",
-          border: "1px solid #81d4fa",
+          border: "1px solid #51CFA2", // Your secondary color
           boxShadow: "0 2px 5px rgba(0, 0, 0, 0.15)",
         }}
       >
@@ -44,22 +43,18 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload }) => {
           style={{
             fontWeight: "600",
             fontSize: "1.1em",
-            color: "#0277bd",
+            color: "#51CFA2", // Your text color
             marginBottom: "5px",
           }}
         >
           {name}
         </p>
-        <p style={{ fontSize: "0.9em", color: "#263238", marginBottom: "3px" }}>
-          <span style={{ fontWeight: "bold", color: "#0288d1" }}>
-            Libertad Economica:
-          </span>{" "}
+        <p style={{ fontSize: "0.9em", color: "#1E063A", marginBottom: "3px" }}>
+          <span style={{ color: "#1E063A" }}>Libertad Economica:</span>{" "}
           {`${x} %`}
         </p>
-        <p style={{ fontSize: "0.9em", color: "#263238", marginBottom: "3px" }}>
-          <span style={{ fontWeight: "bold", color: "#0288d1" }}>
-            Libertad Personal:
-          </span>{" "}
+        <p style={{ fontSize: "0.9em", color: "#1E063A", marginBottom: "3px" }}>
+          <span style={{ color: "#1E063A" }}>Libertad Personal:</span>{" "}
           {`${y} %`}
         </p>
       </div>

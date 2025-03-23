@@ -29,7 +29,7 @@ const QuestionBoard = ({
 
   return (
     <div className="flex h-full w-full items-center justify-center ">
-      <div className="w-[80vw]  max-w-5xl p-12 rounded-2xl border-lg shadow-lg bg-white ">
+      <div className="w-[80vw]  max-w-5xl p-12 rounded-2xl border-lg shadow-lg bg-background text-colorText">
         <div className="font-semibold mb-4 md:text-xl text-center">
           {questionObject?.question || "No Question Selected"}
         </div>
