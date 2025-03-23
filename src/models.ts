@@ -21,10 +21,11 @@ export interface Question {
   options: string[];
 } 
 
-export interface Politicians {
+export interface Politician {
   name: string;
   position: Points;
-  src: string
+  imgKey: string
+  img?: string
 }
 
 export enum Category {

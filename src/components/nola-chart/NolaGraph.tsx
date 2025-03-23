@@ -11,8 +11,7 @@ import {
   Label,
 } from "recharts";
 import { Points } from "../../models";
-import { politiciansIdeologies } from "../../data";
-import mileiImage from "/milei.jpeg";
+import { politicians } from "../../data";
 import CustomTooltip from "./CustomTooltip";
 
 const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
@@ -99,7 +98,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             label="Centro"
           />
           <Scatter key="Usted" name="Usted" data={data} fill="brown" />
-          {politiciansIdeologies.map((politician) => (
+          {politicians.map((politician) => (
             <Scatter
               key={politician.name}
               name={politician.name}
@@ -108,15 +107,14 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
                 {
                   x: politician.position.economicFreedom,
                   y: politician.position.individualFreedom,
-                  imgSrc: mileiImage,
+                  imgSrc: politician.img,
                   name: politician.name,
                 },
               ]}
               shape={
                 <image
-                  width={30}
-                  height={30}
-                  xlinkHref={mileiImage}
+                  className="w-10 h-10 sm:w-10 sm:h-10 md:w-15 md:h-15"
+                  xlinkHref={politician.img}
                 />
               }
             />

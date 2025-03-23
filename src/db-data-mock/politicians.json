@@ -1,19 +1,69 @@
 {
   "politicians": [
     {
-      "name": "Milei",
-      "position": { "economicFreedom": 90, "individualFreedom": 90 },
-      "src": "@assets/milei.jpeg"
-    },
-    {
-      "name": "Bulrich",
+      "name": "Patricia Bullrich",
       "position": { "economicFreedom": 60, "individualFreedom": 5 },
-      "src": ""
+      "imgKey": "bullrich"
     },
     {
-      "name": "Cristina",
+      "name": "Cristina Fernández de Kirchner",
       "position": { "economicFreedom": 10, "individualFreedom": 20 },
-      "src": ""
+      "imgKey": "cfk"
+    },
+    {
+      "name": "Eva Perón",
+      "position": { "economicFreedom": 15, "individualFreedom": 30 },
+      "imgKey": "evita"
+    },
+    {
+      "name": "Greta Thunberg",
+      "position": { "economicFreedom": 5, "individualFreedom": 40 },
+      "imgKey": "greta"
+    },
+    {
+      "name": "Néstor Kirchner",
+      "position": { "economicFreedom": 20, "individualFreedom": 25 },
+      "imgKey": "nestor"
+    },
+    {
+      "name": "Juan Domingo Perón",
+      "position": { "economicFreedom": 25, "individualFreedom": 50 },
+      "imgKey": "peron"
+    },
+    {
+      "name": "Donald Trump",
+      "position": { "economicFreedom": 80, "individualFreedom": 50 },
+      "imgKey": "trump"
+    },
+    {
+      "name": "Javier Milei",
+      "position": { "economicFreedom": 90, "individualFreedom": 90 },
+      "imgKey": "milei"
+    },
+    {
+      "name": "Elon Musk",
+      "position": { "economicFreedom": 90, "individualFreedom": 70 },
+      "imgKey": "musk"
+    },
+    {
+      "name": "Karl Marx",
+      "position": { "economicFreedom": 0, "individualFreedom": 50 },
+      "imgKey": "marx"
+    },
+    {
+      "name": "Joe Biden",
+      "position": { "economicFreedom": 40, "individualFreedom": 60 },
+      "imgKey": "biden"
+    },
+    {
+      "name": "Vladimir Putin",
+      "position": { "economicFreedom": 30, "individualFreedom": 10 },
+      "imgKey": "putin"
+    },
+    {
+      "name": "Kim Jong-un",
+      "position": { "economicFreedom": 0, "individualFreedom": 0 },
+      "imgKey": "kim"
     }
   ]
 }
