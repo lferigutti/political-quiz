@@ -25,7 +25,7 @@ const QuestionBoard = ({
 
   const option =
     userAnswers.find((a) => a.questionId === questionObject?.id)
-      ?.selectedOption ?? "nada";
+      ?.selectedOption ?? "Error";
 
   return (
     <div className="flex h-full w-full items-center justify-center ">
@@ -34,6 +34,7 @@ const QuestionBoard = ({
           {questionObject?.question || "No Question Selected"}
         </div>
         <Options
+          key={questionObject?.id}
           questionObject={questionObject}
           onSelectedAnswer={handleSelectedAnswer}
           optionSelected={option}

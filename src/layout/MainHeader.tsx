@@ -8,7 +8,7 @@ const MainHeader = () => {
     <Header className="h-16 bg-background flex justify-between items-center px-8 shadow-lg">
       <div className="text-2xl font-semibold">
         <Link to="/" className="hover:text-secondary">
-          TestPolítico
+          Test Político
         </Link>
       </div>
       <NavigationBar />

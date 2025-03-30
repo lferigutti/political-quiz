@@ -1,4 +1,20 @@
+import { useMemo } from "react";
 import { Question } from "../models";
+
+
+const shuffleWithSeed = (array: string[], seed: number) => {
+  const shuffled = [...array];
+  let randomSeed = seed;
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    randomSeed = (randomSeed * 9301 + 49297) % 233280; // Simple LCG
+    const j = randomSeed % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+};
+
 
 const Options = ({
   questionObject,
@@ -8,10 +24,16 @@ const Options = ({
   questionObject: Question | undefined;
   onSelectedAnswer: (option: string) => void;
   optionSelected: string;
-}) => {
+  }) => {
+  
+    const shuffledOptions = useMemo(() => {
+      if (!questionObject) return [];
+      return shuffleWithSeed(questionObject.options, questionObject.id);
+    }, [questionObject]);
+  
   return (
     <ul className="items-start space-y-3 w-full mx-auto">
-      {questionObject?.options.map((option) => {
+      {shuffledOptions.map((option) => {
         const isSelected = option === optionSelected;
         return (
           <li key={option} className="w-full">
