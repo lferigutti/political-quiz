@@ -13,7 +13,7 @@ const MainLayout = () => {
         </Content>
         <Footer className="flex items-center justify-end gap-5 bg-backgroundSecondary p-4">
           <span>Contenido: Elisa Fernandez</span>
-          <span>Desarrollo Web: Leonardo Feriguti</span>
+          <span>Desarrollo Web: Leonardo Ferigutti</span>
         </Footer>
       </Layout>)
 };

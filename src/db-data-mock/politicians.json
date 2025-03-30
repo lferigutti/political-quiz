@@ -32,7 +32,7 @@
     },
     {
       "name": "Donald Trump",
-      "position": { "economicFreedom": 80, "individualFreedom": 40 },
+      "position": { "economicFreedom": 75, "individualFreedom": 40 },
       "imgKey": "trump"
     },
     {
