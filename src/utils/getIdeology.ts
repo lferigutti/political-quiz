@@ -1,7 +1,14 @@
 import { allIdeologies, ideologies } from "../data.ts";
-import { Points } from "../models.ts";
+import { FinalPoints } from "../models.ts";
 
-export const getIdeology = (quizResults: Points) => {
+export const getIdeology = (quizResults: FinalPoints) => {
+    if (
+      !quizResults ||
+      quizResults.economicFreedom === undefined ||
+      quizResults.individualFreedom === undefined
+    ) {
+      return undefined;
+    }
   const ideology = ideologies.find((i) => {
     return (
       quizResults.economicFreedom >= i.x.x1 &&
