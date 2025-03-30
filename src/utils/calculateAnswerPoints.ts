@@ -1,10 +1,10 @@
 import { allQuestions } from "../data.ts"
-import { Answer, Category } from "../models.ts";
+import { Answer, Category, Points } from "../models.ts";
 
 export const calculateAnswerPoints = (answer: Answer) => {
-    const points = {
-        economicFreedom: 0,
-        individualFreedom: 0
+    const points: Points = {
+        economicFreedom: undefined,
+        individualFreedom: undefined
     }
 
     const question = allQuestions.find(

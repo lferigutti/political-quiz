@@ -10,6 +10,7 @@ export default {
       neutral: "#1E063A",
       backgroundSecondary: "#F3F6FE",
       colorText: "#1E063A",
+      muted: "#6B7280",
     },
   },
   plugins: [],

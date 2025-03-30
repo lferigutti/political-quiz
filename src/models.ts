@@ -4,8 +4,8 @@ export interface UserAnswer extends Answer {
 }
 
 export interface Points {
-  economicFreedom: number;
-  individualFreedom: number;
+  economicFreedom: number|undefined;
+  individualFreedom: number|undefined;
 }
 
 export interface Answer {

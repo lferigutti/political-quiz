@@ -55,7 +55,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             stroke="black"
             label={
               <Text angle={-90} dx={13} dy={300}>
-                Libertad Individual →
+                Libertad Personal →
               </Text>
             }
           />
