@@ -13,16 +13,17 @@ const TestPolitico = () => {
   const [selectedQuestionID, setSelectedQuestionID] = useState(1);
   const navigate = useNavigate();
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
-  const [isLastQuestionAnswered, setIsLastQuestionAnswered] = useState(false)
+  const [isLastQuestionAnswered, setIsLastQuestionAnswered] = useState(false);
 
   const questionSelected = allQuestions.find(
     (question) => question.id === selectedQuestionID
   );
 
-  
   const numberOfQuestions = allQuestions?.length || 999;
-  const percentageAnswered = userAnswers.length * 100 / numberOfQuestions;
-  const questionRepliedIds = userAnswers.map((a)=> a.questionId)
+  const percentageAnswered = Math.round(
+    (userAnswers.length * 100) / numberOfQuestions
+  );
+  const questionRepliedIds = userAnswers.map((a) => a.questionId);
 
   const handleAddAnswer = (answer: Answer) => {
     const answerWithPoints = calculateAnswerPoints(answer);
@@ -40,7 +41,7 @@ const TestPolitico = () => {
       newUserAnswers = [...userAnswersCopy, answerWithPoints];
     }
     setUserAnswers(newUserAnswers);
-    if (answerWithPoints.questionId === 20) {
+    if (answerWithPoints.questionId === allQuestions.length) {
       setIsLastQuestionAnswered(true);
     } else {
       setTimeout(() => {
@@ -106,7 +107,10 @@ const TestPolitico = () => {
             Próxima
           </Button>
         ) : (
-            <Button type={isLastQuestionAnswered? "primary" : "outline"} onClick={submitAnswers}>
+          <Button
+            type={isLastQuestionAnswered ? "primary" : "outline"}
+            onClick={submitAnswers}
+          >
             Finalizar Test
           </Button>
         )}

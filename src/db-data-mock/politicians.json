@@ -2,37 +2,37 @@
   "politicians": [
     {
       "name": "Patricia Bullrich",
-      "position": { "economicFreedom": 60, "individualFreedom": 20 },
+      "position": { "economicFreedom": 90, "individualFreedom": 30 },
       "imgKey": "bullrich"
     },
     {
-      "name": "Cristina Fernández de Kirchner",
-      "position": { "economicFreedom": 10, "individualFreedom": 20 },
+      "name": "Cristina F Kirchner",
+      "position": { "economicFreedom": 20, "individualFreedom": 20 },
       "imgKey": "cfk"
     },
     {
       "name": "Eva Perón",
-      "position": { "economicFreedom": 15, "individualFreedom": 50 },
+      "position": { "economicFreedom": 30, "individualFreedom": 50 },
       "imgKey": "evita"
     },
     {
       "name": "Greta Thunberg",
-      "position": { "economicFreedom": 5, "individualFreedom": 80 },
+      "position": { "economicFreedom": 5, "individualFreedom": 70 },
       "imgKey": "greta"
     },
     {
       "name": "Néstor Kirchner",
-      "position": { "economicFreedom": 20, "individualFreedom": 40 },
+      "position": { "economicFreedom": 30, "individualFreedom": 40 },
       "imgKey": "nestor"
     },
     {
       "name": "Juan Domingo Perón",
-      "position": { "economicFreedom": 25, "individualFreedom": 50 },
+      "position": { "economicFreedom": 40, "individualFreedom": 50 },
       "imgKey": "peron"
     },
     {
       "name": "Donald Trump",
-      "position": { "economicFreedom": 80, "individualFreedom": 50 },
+      "position": { "economicFreedom": 80, "individualFreedom": 40 },
       "imgKey": "trump"
     },
     {
@@ -46,13 +46,13 @@
       "imgKey": "musk"
     },
     {
-      "name": "Karl Marx",
-      "position": { "economicFreedom": 0, "individualFreedom": 50 },
-      "imgKey": "marx"
+      "name": "Stalin",
+      "position": { "economicFreedom": 0, "individualFreedom": 30 },
+      "imgKey": "stalin"
     },
     {
       "name": "Joe Biden",
-      "position": { "economicFreedom": 45, "individualFreedom": 65 },
+      "position": { "economicFreedom": 40, "individualFreedom": 60 },
       "imgKey": "biden"
     },
     {
@@ -71,9 +71,9 @@
       "imgKey": "bukele"
     },
     {
-      "name": "Alberto Fernández",
-      "position": { "economicFreedom": 30, "individualFreedom": 50 },
-      "imgKey": "alberto"
+      "name": "Sergio Massa",
+      "position": { "economicFreedom": 25, "individualFreedom": 45 },
+      "imgKey": "massa"
     },
     {
       "name": "Pedro Sánchez",
@@ -81,9 +81,9 @@
       "imgKey": "sanchez"
     },
     {
-      "name": "Hugo Chávez",
-      "position": { "economicFreedom": 5, "individualFreedom": 10 },
-      "imgKey": "chavez"
+      "name": "Nicolás Maduro",
+      "position": { "economicFreedom": 10, "individualFreedom": 10 },
+      "imgKey": "maduro"
     },
     {
       "name": "Jair Bolsonaro",
@@ -107,7 +107,7 @@
     },
     {
       "name": "Giorgia Meloni",
-      "position": { "economicFreedom": 75, "individualFreedom": 35 },
+      "position": { "economicFreedom": 75, "individualFreedom": 30 },
       "imgKey": "meloni"
     }
   ]

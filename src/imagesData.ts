@@ -4,7 +4,6 @@ import cfk from "/cfk.jpg";
 import evita from "/evita.jpg";
 import greta from "/greta.jpg";
 import kim from "/kim.jpg";
-import marx from "/marx.jpg";
 import milei from "/milei.jpg";
 import musk from "/musk.jpg";
 import nestor from "/nestor.jpg";
@@ -20,6 +19,9 @@ import macron from "/macron.jpg";
 import berlusconi from "/berlusconi.jpg";
 import merkel from "/merkel.jpg";
 import meloni from "/meloni.jpg";
+import massa from "/massa.jpg";
+import stalin from "/stalin.jpg"
+import maduro from "/maduro.jpg"
 
 export const imageMap = {
   biden,
@@ -28,7 +30,6 @@ export const imageMap = {
   evita,
   greta,
   kim,
-  marx,
   milei,
   musk,
   nestor,
@@ -44,4 +45,7 @@ export const imageMap = {
   berlusconi,
   merkel,
   meloni,
+  maduro,
+  stalin,
+  massa
 };
