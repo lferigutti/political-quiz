@@ -2,7 +2,7 @@
   "politicians": [
     {
       "name": "Patricia Bullrich",
-      "position": { "economicFreedom": 60, "individualFreedom": 5 },
+      "position": { "economicFreedom": 60, "individualFreedom": 20 },
       "imgKey": "bullrich"
     },
     {
@@ -12,17 +12,17 @@
     },
     {
       "name": "Eva Perón",
-      "position": { "economicFreedom": 15, "individualFreedom": 30 },
+      "position": { "economicFreedom": 15, "individualFreedom": 50 },
       "imgKey": "evita"
     },
     {
       "name": "Greta Thunberg",
-      "position": { "economicFreedom": 5, "individualFreedom": 40 },
+      "position": { "economicFreedom": 5, "individualFreedom": 80 },
       "imgKey": "greta"
     },
     {
       "name": "Néstor Kirchner",
-      "position": { "economicFreedom": 20, "individualFreedom": 25 },
+      "position": { "economicFreedom": 20, "individualFreedom": 40 },
       "imgKey": "nestor"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "name": "Joe Biden",
-      "position": { "economicFreedom": 40, "individualFreedom": 60 },
+      "position": { "economicFreedom": 45, "individualFreedom": 65 },
       "imgKey": "biden"
     },
     {
@@ -64,6 +64,51 @@
       "name": "Kim Jong-un",
       "position": { "economicFreedom": 0, "individualFreedom": 0 },
       "imgKey": "kim"
+    },
+    {
+      "name": "Nayib Bukele",
+      "position": { "economicFreedom": 50, "individualFreedom": 30 },
+      "imgKey": "bukele"
+    },
+    {
+      "name": "Alberto Fernández",
+      "position": { "economicFreedom": 30, "individualFreedom": 50 },
+      "imgKey": "alberto"
+    },
+    {
+      "name": "Pedro Sánchez",
+      "position": { "economicFreedom": 40, "individualFreedom": 60 },
+      "imgKey": "sanchez"
+    },
+    {
+      "name": "Hugo Chávez",
+      "position": { "economicFreedom": 5, "individualFreedom": 10 },
+      "imgKey": "chavez"
+    },
+    {
+      "name": "Jair Bolsonaro",
+      "position": { "economicFreedom": 80, "individualFreedom": 40 },
+      "imgKey": "bolsonaro"
+    },
+    {
+      "name": "Emmanuel Macron",
+      "position": { "economicFreedom": 40, "individualFreedom": 70 },
+      "imgKey": "macron"
+    },
+    {
+      "name": "Silvio Berlusconi",
+      "position": { "economicFreedom": 70, "individualFreedom": 80 },
+      "imgKey": "berlusconi"
+    },
+    {
+      "name": "Angela Merkel",
+      "position": { "economicFreedom": 60, "individualFreedom": 40 },
+      "imgKey": "merkel"
+    },
+    {
+      "name": "Giorgia Meloni",
+      "position": { "economicFreedom": 75, "individualFreedom": 35 },
+      "imgKey": "meloni"
     }
   ]
 }
