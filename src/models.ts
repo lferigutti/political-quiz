@@ -29,7 +29,7 @@ export interface Question {
 export interface Politician {
   name: string;
   position: Points;
-  imgKey: string
+  imgKey?: string
   img?: string
 }
 

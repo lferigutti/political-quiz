@@ -3,25 +3,25 @@ import IDEOLOGIES from "./db-data-mock/ideologies.json";
 import POLITICIANS from "./db-data-mock/politicians.json";
 
 import type { Question, Category, Politician } from "./models";
-import { imageMap } from "./imagesData";
+// import { imageMap } from "./imagesData";
 
 
 
-const addImageToPoliticians = (
-  politiciansArray: Politician[],
-  images: { [key: string]: string }
-) => {
-  return politiciansArray.map((politcian) => {
-    if (images[politcian.imgKey]) {
-      return {
-        ...politcian,
-        img: images[politcian.imgKey],
-      };
-    } else {
-      return politcian;
-    }
-  });
-};
+// const addImageToPoliticians = (
+//   politiciansArray: Politician[],
+//   images: { [key: string]: string }
+// ) => {
+//   return politiciansArray.map((politcian) => {
+//     if (images[politcian.imgKey]) {
+//       return {
+//         ...politcian,
+//         img: images[politcian.imgKey],
+//       };
+//     } else {
+//       return politcian;
+//     }
+//   });
+// };
 
 
 export const allQuestions: Question[] = QUESTIONS.questions.map((item) => ({
@@ -36,7 +36,7 @@ export const allIdeologies = IDEOLOGIES.ideologies;
 
 export const politiciansIdeologies: Politician[] = POLITICIANS.politicians
 
-export const politicians : Politician[] = addImageToPoliticians(politiciansIdeologies, imageMap)
+// export const politicians : Politician[] = addImageToPoliticians(politiciansIdeologies, imageMap)
 
 export const ideologies = [
   {

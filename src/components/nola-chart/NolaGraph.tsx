@@ -12,11 +12,13 @@ import {
   ReferenceLine,
   Text
 } from "recharts";
-import { Points } from "../../models";
-import { politicians } from "../../data";
+import { Points, Politician } from "../../models";
+
 import CustomTooltip from "./CustomTooltip";
 import { useState, useEffect } from "react";
-import CircularImage from "./CircularImage";
+//import CircularImage from "./CircularImage";
+import { useQuery } from "@tanstack/react-query";
+import { request } from "../../utils/request";
 
 
 const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
@@ -24,6 +26,11 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
     chartHeigh: window.innerWidth < 640 ? 450 : 550,
     imageSize: window.innerWidth < 640 ? 25 : 50,
   });
+
+  const { data: politicians } = useQuery({
+    queryKey: ["politicians"],
+    queryFn: () => request<Politician[]>('api/v1/politicians'),
+  })
 
   useEffect(() => {
     const handleResize = () => {
@@ -139,7 +146,7 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
             fillOpacity={0.1}
             label="Centro"
           />
-          {politicians.map((politician) => (
+          {politicians && politicians.map((politician) => (
             <Scatter
               key={politician.name}
               name={politician.name}
@@ -149,12 +156,12 @@ const NolanGraph = ({ resultsCoordenates }: { resultsCoordenates: Points }) => {
                 {
                   x: politician.position.economicFreedom,
                   y: politician.position.individualFreedom,
-                  imgSrc: politician.img, // Make sure politician.img holds the URL/path
+                  //imgSrc: politician.img, // Make sure politician.img holds the URL/path
                   name: politician.name,
                 },
               ]}
               // Pass the custom shape component instance, providing the imageSize prop
-              shape={<CircularImage imageSize={sizes.imageSize} />}
+              //shape={<CircularImage imageSize={sizes.imageSize} />}
             />
           ))}
           <Scatter
