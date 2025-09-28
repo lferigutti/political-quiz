@@ -17,46 +17,35 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload }) => {
     const { name, x, y, imgSrc } = payload[0].payload; // Destructure payload
 
     return (
-      <div
-        style={{
-          backgroundColor: "#ffffff", // Softer version of secondary
-          padding: "10px",
-          borderRadius: "8px",
-          border: "1px solid #51CFA2", // Your secondary color
-          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.15)",
-        }}
-      >
+      <div className="bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-primary/30 shadow-2xl transform transition-all duration-300 hover:scale-105">
         {imgSrc && (
-          <img
-            src={imgSrc}
-            alt={name}
-            style={{
-              width: "60px",
-              height: "60px",
-              borderRadius: "30px",
-              marginBottom: "8px",
-              objectFit: "cover",
-            }}
-          />
+          <div className="flex justify-center mb-3">
+            <img
+              src={imgSrc}
+              alt={name}
+              className="w-16 h-16 rounded-full object-cover border-3 border-primary/50 shadow-lg"
+            />
+          </div>
         )}
-        <p
-          style={{
-            fontWeight: "600",
-            fontSize: "1.1em",
-            color: "#51CFA2", // Your text color
-            marginBottom: "5px",
-          }}
-        >
-          {name}
-        </p>
-        <p style={{ fontSize: "0.9em", color: "#1E063A", marginBottom: "3px" }}>
-          <span style={{ color: "#1E063A" }}>Libertad Economica:</span>{" "}
-          {`${x} %`}
-        </p>
-        <p style={{ fontSize: "0.9em", color: "#1E063A", marginBottom: "3px" }}>
-          <span style={{ color: "#1E063A" }}>Libertad Personal:</span>{" "}
-          {`${y} %`}
-        </p>
+        <div className="text-center space-y-2">
+          <p className="font-bold text-lg text-neutral bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {name}
+          </p>
+          <div className="space-y-1">
+            <p className="text-sm text-neutral/80">
+              <span className="font-semibold text-neutral">
+                Libertad Económica:
+              </span>{" "}
+              <span className="font-bold text-secondary">{x}%</span>
+            </p>
+            <p className="text-sm text-neutral/80">
+              <span className="font-semibold text-neutral">
+                Libertad Personal:
+              </span>{" "}
+              <span className="font-bold text-secondary">{y}%</span>
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

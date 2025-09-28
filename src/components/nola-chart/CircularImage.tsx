@@ -1,11 +1,9 @@
-
 interface PoliticianDataPoint {
   x: number;
   y: number;
   imgSrc: string; // Expecting politician images to always have a src
   name: string;
 }
-
 
 const CircularImage = (props: {
   cx?: number;
@@ -14,7 +12,6 @@ const CircularImage = (props: {
   imageSize?: number;
 }) => {
   const { cx, cy, payload, imageSize } = props;
-
 
   if (!cx || !cy || !imageSize || !payload || !payload.imgSrc) {
     return null;
@@ -48,8 +45,26 @@ const CircularImage = (props: {
         clipPath={`url(#${uniqueClipId})`}
         preserveAspectRatio="xMidYMid slice"
       />
-      {/* Optional: Add a border circle */}
-      <circle cx={cx} cy={cy} r={radius} fill="none" stroke="rgba(0,0,0,0.3)" strokeWidth="1" />
+      {/* Modern border with gradient effect */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={radius + 1}
+        fill="none"
+        stroke="rgba(169, 242, 125, 0.6)"
+        strokeWidth="2"
+        style={{
+          filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))",
+        }}
+      />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={radius + 3}
+        fill="none"
+        stroke="rgba(169, 242, 125, 0.3)"
+        strokeWidth="1"
+      />
     </g>
   );
 };

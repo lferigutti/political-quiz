@@ -43,11 +43,8 @@ const TestPolitico = () => {
     setUserAnswers(newUserAnswers);
     if (answerWithPoints.questionId === allQuestions.length) {
       setIsLastQuestionAnswered(true);
-    } else {
-      setTimeout(() => {
-        handleNextQuestion();
-      }, 500);
     }
+    // Removed automatic navigation - users now control when to move forward
   };
 
   const submitAnswers = () => {
@@ -64,54 +61,120 @@ const TestPolitico = () => {
   };
 
   return (
-    <div className="flex flex-col bg-gray-100 space-y-5 items-center mt-4 px-4 sm:px-8">
-      {/* Dropdown and Header */}
-      <div className="w-full max-w-3xl flex justify-between">
-        <DropDownQuestions
-          onSelectedQuestion={setSelectedQuestionID}
-          questionSelectedID={selectedQuestionID}
-          questionAnsweredIds={questionRepliedIds}
-        />
-        <Progress
-          type="circle"
-          percent={percentageAnswered}
-          size="small"
-          strokeColor="#a9f27d"
-        />
+    <div className="w-full max-w-6xl mx-auto p-4 md:p-8 space-y-8">
+      {/* Progress Header */}
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-6 border border-white/30">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div className="flex-1">
+            <h1 className="text-2xl md:text-3xl font-bold text-neutral mb-2 bg-gradient-to-r from-neutral via-secondary to-primary bg-clip-text text-transparent">
+              Test Político
+            </h1>
+            <p className="text-neutral/70">
+              Pregunta {selectedQuestionID} de {numberOfQuestions}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <DropDownQuestions
+              onSelectedQuestion={setSelectedQuestionID}
+              questionSelectedID={selectedQuestionID}
+              questionAnsweredIds={questionRepliedIds}
+            />
+            <div className="relative">
+              <Progress
+                type="circle"
+                percent={percentageAnswered}
+                size={80}
+                strokeColor={{
+                  "0%": "#a9f27d",
+                  "100%": "#51CFA2",
+                }}
+                trailColor="#f0f0f0"
+                strokeWidth={8}
+                format={(percent) => (
+                  <span className="text-sm font-semibold text-neutral">
+                    {percent}%
+                  </span>
+                )}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Question Board Section */}
-      <div className="w-full max-w-3xl">
-        <QuestionBoard
-          questionObject={questionSelected}
-          handleNewAnswer={handleAddAnswer}
-          userAnswers={userAnswers}
-        />
-      </div>
+      <QuestionBoard
+        questionObject={questionSelected}
+        handleNewAnswer={handleAddAnswer}
+        userAnswers={userAnswers}
+      />
 
       {/* Navigation Buttons */}
-      <div className="w-full max-w-3xl flex justify-between px-4 sm:px-8">
+      <div className="flex justify-between items-center bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-6 border border-white/30">
         <Button
           type="background-secondary"
           onClick={handlePrevQuestion}
           disabled={selectedQuestionID === 1}
+          className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
         >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
           Anterior
         </Button>
+
         {selectedQuestionID !== numberOfQuestions ? (
           <Button
             type="secondary"
             onClick={handleNextQuestion}
             disabled={selectedQuestionID === numberOfQuestions}
+            className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
           >
             Próxima
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
           </Button>
         ) : (
           <Button
             type={isLastQuestionAnswered ? "primary" : "outline"}
             onClick={submitAnswers}
+            className="flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
           >
-            Finalizar Test
+            <span>Finalizar Test</span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
           </Button>
         )}
       </div>

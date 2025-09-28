@@ -2,34 +2,45 @@ import { NavLink } from "react-router";
 
 const NavigationBar = () => {
   return (
-    <nav className="gap-5 flex items-center text-md">
+    <nav className="flex items-center gap-2">
       <NavLink
         to="/"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-          textDecoration: isActive ? "underline" : "none",
-          textDecorationColor: isActive ? "#a9f27d" : "transparent",
-          textDecorationThickness: "2px",
-          textUnderlineOffset: "4px",
-          color: "inherit", // Ensures text color stays the same on hover
-        })}
-        className="transition-opacity duration-200 hover:opacity-80"
+        className={({ isActive }) =>
+          `relative px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 transform hover:scale-105 ${
+            isActive
+              ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg"
+              : "text-neutral/80 hover:text-neutral hover:bg-white/20 backdrop-blur-sm"
+          }`
+        }
       >
-        Home
+        {({ isActive }) => (
+          <>
+            <span>Home</span>
+            {isActive && (
+              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-lg"></div>
+            )}
+          </>
+        )}
       </NavLink>
+
       <NavLink
         to="/test-politico"
-        style={({ isActive }) => ({
-          fontWeight: isActive ? "bold" : "normal",
-          textDecoration: isActive ? "underline" : "none",
-          textDecorationColor: isActive ? "#a9f27d" : "transparent",
-          textDecorationThickness: "2px",
-          textUnderlineOffset: "4px",
-          color: "inherit", // Ensures text color stays the same on hover
-        })}
-        className="transition-opacity duration-200 hover:opacity-80"
+        className={({ isActive }) =>
+          `relative px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 transform hover:scale-105 ${
+            isActive
+              ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg"
+              : "text-neutral/80 hover:text-neutral hover:bg-white/20 backdrop-blur-sm"
+          }`
+        }
       >
-        Test Politico
+        {({ isActive }) => (
+          <>
+            <span>Test Político</span>
+            {isActive && (
+              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-lg"></div>
+            )}
+          </>
+        )}
       </NavLink>
     </nav>
   );

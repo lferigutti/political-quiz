@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Question } from "../models";
 
-
 const shuffleWithSeed = (array: string[], seed: number) => {
   const shuffled = [...array];
   let randomSeed = seed;
@@ -15,7 +14,6 @@ const shuffleWithSeed = (array: string[], seed: number) => {
   return shuffled;
 };
 
-
 const Options = ({
   questionObject,
   onSelectedAnswer,
@@ -24,33 +22,46 @@ const Options = ({
   questionObject: Question | undefined;
   onSelectedAnswer: (option: string) => void;
   optionSelected: string;
-  }) => {
-  
-    const shuffledOptions = useMemo(() => {
-      if (!questionObject) return [];
-      return shuffleWithSeed(questionObject.options, questionObject.id);
-    }, [questionObject]);
-  
+}) => {
+  const shuffledOptions = useMemo(() => {
+    if (!questionObject) return [];
+    return shuffleWithSeed(questionObject.options, questionObject.id);
+  }, [questionObject]);
+
   return (
-    <ul className="items-start space-y-3 w-full mx-auto">
+    <ul className="items-start space-y-4 w-full mx-auto">
       {shuffledOptions.map((option) => {
         const isSelected = option === optionSelected;
         return (
           <li key={option} className="w-full">
             <button
-              className={`w-full p-2 sm:p-3 md:text-lg break-words text-center sm:text-left 
-                      rounded-lg border transition-all duration-200 
-                      md:hover:border-primary md:hover:bg-tertiary 
-                      outline-none 
+              className={`w-full p-4 md:p-5 text-lg break-words text-left 
+                      rounded-2xl border-2 transition-all duration-300 
+                      transform hover:scale-[1.02] hover:-translate-y-1
+                      focus:outline-none focus:ring-4 focus:ring-primary/20
+                      shadow-lg hover:shadow-xl
                       ${
                         isSelected
-                          ? "bg-tertiary border-primary shadow-md"
-                          : "border-gray-300"
+                          ? "bg-gradient-to-r from-primary/20 to-secondary/20 border-primary shadow-xl scale-[1.02] -translate-y-1 text-neutral font-semibold"
+                          : "bg-white/80 border-neutral/20 hover:border-primary/50 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 text-neutral/80 hover:text-neutral"
                       }`}
               onClick={() => onSelectedAnswer(option)}
               aria-pressed={isSelected}
             >
-              {option}
+              <div className="flex items-center">
+                <div
+                  className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center transition-all duration-300 ${
+                    isSelected
+                      ? "border-primary bg-primary"
+                      : "border-neutral/30"
+                  }`}
+                >
+                  {isSelected && (
+                    <div className="w-3 h-3 rounded-full bg-white"></div>
+                  )}
+                </div>
+                <span className="flex-1">{option}</span>
+              </div>
             </button>
           </li>
         );

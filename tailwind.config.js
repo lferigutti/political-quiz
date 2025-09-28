@@ -2,6 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    extend: {
+      backdropBlur: {
+        xs: "2px",
+      },
+      animation: {
+        tilt: "tilt 10s infinite linear",
+      },
+    },
     colors: {
       background: "#ffffff",
       primary: "#a9f27d",
@@ -11,8 +19,8 @@ export default {
       backgroundSecondary: "#F3F6FE",
       colorText: "#1E063A",
       muted: "#6B7280",
+      white: "#ffffff",
     },
   },
   plugins: [],
 };
-
